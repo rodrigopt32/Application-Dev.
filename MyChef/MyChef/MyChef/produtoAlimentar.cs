@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyChef
 {
-    internal class produtoAlimentar
+    internal abstract class produtoAlimentar
     {
         public int p_codigo;
         public string p_nome;
@@ -85,23 +85,6 @@ namespace MyChef
             p_numeroDistribuidores = 0;
             p_distribuidorPrincipal = "";
             p_maximoDistribuidores = 0;
-        }
-
-        public double ValorNutricionalMedio()
-        {
-            double ValorNutriocionalMedio;
-            p_proteinas = p_proteinas * 4;
-            p_carboHidratos = p_carboHidratos * 4;
-            p_lipidos = p_lipidos * 9;
-            ValorNutriocionalMedio = p_proteinas + p_carboHidratos + p_lipidos;
-            return ValorNutriocionalMedio;
-        }     
-
-        public double ValorNutricionalTotal()
-        {
-            double ValorNutricionalTotal;
-            ValorNutricionalTotal = ValorNutricionalMedio() * p_pesoUnidade;
-            return ValorNutricionalTotal;
         }
     }
 }
